@@ -1,0 +1,20 @@
+kind: project
+metadata:
+  name: git-test-shapira
+spec:
+  functions:
+  - url: add_2.py
+    name: add_2
+    kind: job
+    image: mlrun/mlrun
+    handler: add_2
+  - url: multi_2.py
+    name: multi_2
+    kind: job
+    image: mlrun/mlrun
+    handler: multi_2
+  workflows: []
+  artifacts: []
+  source: git://github.com/GiladShapira94/test-push.git#refs/heads/master
+  origin_url: git://github.com/GiladShapira94/test-push.git#master
+  desired_state: online
